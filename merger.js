@@ -6,11 +6,11 @@ const outputData = [];
 const properties = [
   {
     name: 'sorting',
-    warning: 'Should match with a field in the json to sort by.'
+    description: 'Enter a field by which to sort your output data'
   },
   {
     name: 'output',
-    warning: 'Must be a json file.'
+    description: 'Tell me what to name your output file (.json files only)'
   }
 ];
 
@@ -24,9 +24,6 @@ fs.readdir('./input', function(err, list) {
 
   prompt.get(properties, function (err, result) {
     if (err) { return onErr(err); }
-    console.log('Command-line input received:');
-    console.log('  Sorting: ' + result.sorting);
-    console.log('  Output File: ' + result.output);
 
 
     // Grab data from each file
