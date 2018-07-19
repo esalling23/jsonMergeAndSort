@@ -1,3 +1,7 @@
 output/*
 input/*
+
+!output/sampleOutput.json
+!input/sampleInput.json
+
 node_modules
